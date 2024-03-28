@@ -98,7 +98,7 @@ $${G} _{x}={
 
 where $*$ denotes the 2-dimensional signal processing convolution operation.
 
-We can iterate through all pixels in the original image and apply the image convolution kernels ![image](https://github.com/BillyDoesDev/MATLAB-stuff/assets/64155209/2db55ec5-04ba-43ca-846c-938b6f2f447f) and $G_{y}$ at every step of the way. This convolution operation will return a single integer for each kernel.
+We can iterate through all pixels in the original image and apply the image convolution kernels and $G_{y}$ at every step of the way. This convolution operation will return a single integer for each kernel.
 
 Here’s an example of what applying the $G_{x}$ kernel on a specific pixel (in red) would look like:
 
