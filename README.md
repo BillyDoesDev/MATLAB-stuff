@@ -34,13 +34,17 @@ First, we take a noisy audio signal as input. It is the sum of two sine waves of
 ```
 **Spectrogram of dirty.wav:**
 
+![image](https://github.com/BillyDoesDev/MATLAB-stuff/assets/64155209/7604d65c-5dfd-48b4-9682-3a4eae8c497e)
 
 
 **Outputs:**
 
+![image](https://github.com/BillyDoesDev/MATLAB-stuff/assets/64155209/6dc4577f-9c0e-4203-bbdb-7500c1b6afc2)
+
 
 **Spectrogram of clean.wav:**
 
+![image](https://github.com/BillyDoesDev/MATLAB-stuff/assets/64155209/9ea9924b-145e-4e73-a233-26c49c440b60)
 
 
 > One may play both the audio files to hear the difference between the dirty and the clean data. However, it is advisable to use headphones at a low volume for a safe, clear experience.
@@ -74,7 +78,7 @@ Edge detection includes a variety of mathematical methods that aim at identifyin
 
 In this experiment, we take a look at the Sobel filter for edge detection. In the simplest terms, the algorithm works by running a 3x3 matrix (known as the kernel) over all the pixels in the image (which must be in grayscale). At every iteration, we measure the change in the gradient of the pixels that fall within this 3x3 kernel. The greater the change in pixel intensity, the more significant the edge there is.
 
-The operator uses two 3×3 kernels which are convolved with the original image to calculate approximations of the derivatives – one for horizontal changes, and one for vertical. If we define A as the source image, and Gx and Gy are two images which at each point contain the horizontal and vertical derivative approximations respectively, the computations are as follows:
+The operator uses two 3×3 kernels which are convolved with the original image to calculate approximations of the derivatives – one for horizontal changes, and one for vertical. If we define A as the source image, and $G_{x}$ and $G_{y}$ are two images which at each point contain the horizontal and vertical derivative approximations respectively, the computations are as follows:
 
 $${G} _{x}={
     \begin{bmatrix}
@@ -94,10 +98,11 @@ $${G} _{x}={
 
 where $*$ denotes the 2-dimensional signal processing convolution operation.
 
-We can iterate through all pixels in the original image and apply the image convolution kernels Gx and Gy at every step of the way. This convolution operation will return a single integer for each kernel.
+We can iterate through all pixels in the original image and apply the image convolution kernels ![image](https://github.com/BillyDoesDev/MATLAB-stuff/assets/64155209/2db55ec5-04ba-43ca-846c-938b6f2f447f) and $G_{y}$ at every step of the way. This convolution operation will return a single integer for each kernel.
 
-Here’s an example of what applying the Gx kernel on a specific pixel (in red) would look like:
+Here’s an example of what applying the $G_{x}$ kernel on a specific pixel (in red) would look like:
 
+![image](https://github.com/BillyDoesDev/MATLAB-stuff/assets/64155209/8bb6e35c-82da-4774-b238-47e03346228a)
 
 
 On the left is the original image with the 3x3 pixel group colored.
@@ -119,6 +124,7 @@ edge_detection
 
 **Output:**
 
+![image](https://github.com/BillyDoesDev/MATLAB-stuff/assets/64155209/25268595-2f00-4812-9555-f6e68e4fa0b3)
 
 
 
