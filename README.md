@@ -76,9 +76,21 @@ In this experiment, we take a look at the Sobel filter for edge detection. In th
 
 The operator uses two 3×3 kernels which are convolved with the original image to calculate approximations of the derivatives – one for horizontal changes, and one for vertical. If we define A as the source image, and Gx and Gy are two images which at each point contain the horizontal and vertical derivative approximations respectively, the computations are as follows:
 
-$${G} _{x}={\begin{bmatrix}+1;0;-1\\+2;0;-2\\+1;0;-1\end{bmatrix}}* {A}$$
+$${G} _{x}={
+    \begin{bmatrix}
+    +1 & 0 & -1\\
+    +2 & 0 & -2\\
+    +1 & 0 & -1
+    \end{bmatrix}
+}* {A}$$
 
-$${G} _{y}={\begin{bmatrix}+1;+2;+1\\0;0;0\\-1;-2;-1\end{bmatrix}}* {A}$$
+$${G} _{x}={
+    \begin{bmatrix}
+    +1 & +2 & +1\\
+     0 &  0 &  0\\
+    -1 & -2 & -1
+    \end{bmatrix}
+}* {A}$$
 
 where $*$ denotes the 2-dimensional signal processing convolution operation.
 
